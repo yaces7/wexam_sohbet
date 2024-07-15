@@ -7,7 +7,7 @@ const Page: NextPageWithLayout = () => {
   return (
     <>
       <Head>
-        <title>ChatXo</title>
+        <title>Wexam Online Sohbet</title>
       </Head>
       <FormSignUp />
     </>
