@@ -5,9 +5,9 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <meta name="title" content="ChatXo"></meta>
-        <meta name="description" content="ChatXo"></meta>
-        <link rel="icon" href="/svg/logo.svg" type="image/icon type" />
+        <meta name="title" content="Wexam Online Sohbet"></meta>
+        <meta name="description" content="Hey! Wexam Online Sohbet yerinde sohbet etmek ister misin ? Burada aradığın herşey var!"></meta>
+        <link rel="icon" href="https://i.imgur.com/2NidQby.jpeg" type="image/icon type" />
       </Head>
       <body>
         <Main />
