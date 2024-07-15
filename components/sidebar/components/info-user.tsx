@@ -42,14 +42,14 @@ const InfoUser = () => {
               className="btn btn-ghost mb-4 capitalize flex w-full justify-start"
             >
               <AiOutlineSetting className="h-7 w-7 mr-3" />
-              <div className="text-lg font-medium">Settings</div>
+              <div className="text-lg font-medium">Ayarlar</div>
             </li>
             <li
               onClick={() => logout()}
               className="btn btn-ghost mb-4 capitalize flex w-full justify-start"
             >
               <FiLogOut className="h-7 w-7 mr-3" />
-              <div className="text-lg font-medium"> Logout</div>
+              <div className="text-lg font-medium"> Çıkış Yap</div>
             </li>
           </ul>
         </div>
