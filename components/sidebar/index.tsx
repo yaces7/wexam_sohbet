@@ -26,7 +26,7 @@ const Sidebar = () => {
         <div className="flex">
           <Link href="/" className="flex btn btn-ghost  px-4">
             <div className="font-title text-primary inline-flex text-4xl transition-all duration-200 md:text-3xl">
-              <span className="lowercase">Chat</span>
+              <span className="lowercase">Sohbet</span>
               <span className="text-base-content uppercase">XO</span>
             </div>
           </Link>
