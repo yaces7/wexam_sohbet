@@ -19,12 +19,12 @@ const Chats: FC<ComponentsProps> = ({ changeTap }) => {
         <div className="flex flex-col w-full h-full items-center justify-center">
           <SvgIcon className="h-16 w-16" />
           <div className="text-lg mt-3 font-mono text-accent-content">
-            Start Chat With&nbsp;
+            Sohbet etmeye başla&nbsp;
             <span
               className="text-accent underline cursor-pointer"
               onClick={changeTap}
             >
-              Friends
+              Arkadaşlar
             </span>
           </div>
         </div>
