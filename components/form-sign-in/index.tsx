@@ -10,12 +10,12 @@ import { useSignInMutation } from "@/store/service/auth";
 import { useEffect } from "react";
 const signInSchema = object({
   email: string()
-    .min(1, "Email address is required")
-    .email("Email Address is invalid"),
+    .min(1, "Email adres Gerekli!")
+    .email("Email Adresi Bulunamadı!"),
   password: string()
-    .min(1, "Password is required")
-    .min(6, "Password must be more than 8 characters")
-    .max(32, "Password must be less than 32 characters"),
+    .min(1, "Şifre Gerekli!")
+    .min(6, "Şifren 6 karakterden daha çok olmalı")
+    .max(32, "Şifren 32 karakterden daha az olmalı"),
 });
 export type SignInInput = TypeOf<typeof signInSchema>;
 const FormSignIn = () => {
@@ -43,40 +43,40 @@ const FormSignIn = () => {
     <>
       <div className="bg-base-200 w-auto sm:w-96  rounded-3xl p-8 z-20">
         <div className="flex justify-between items-center">
-          <p className="font-thin ">Welcome to chat App</p>
+          <p className="font-thin ">Wexam Sohbet Yerine Hoşgeldin</p>
           <p className=" font-serif text-xs">
-            No Account ?<br />
+            Hesap Yok ?<br />
             <span
               className="text-success cursor-pointer text-bold"
               onClick={() => router.push("/sign-up")}
             >
-              Sign Up
+              Kayıt Ol
             </span>
           </p>
         </div>
         <div>
-          <h1 className="text-4xl font-bold ">Sign In</h1>
+          <h1 className="text-4xl font-bold ">Kayıt OL</h1>
         </div>
         <form onSubmit={handleSubmit(onSubmitHandler)}>
           <div className="mt-5 space-y-3">
-            <p className="text-sm font-extralight">Enter your Email address</p>
+            <p className="text-sm font-extralight">Email Adresinizi girin</p>
             <div>
               <input
                 type="email"
                 {...register("email")}
-                placeholder="Email Address"
+                placeholder="Email Adresiniz"
                 className="input input-primary w-full  input-md"
               />
               <p className="mt-1 text-error font-semibold  text-sm">
                 {errors.email?.message}
               </p>
             </div>
-            <p className="text-sm font-extralight">Enter your Password</p>
+            <p className="text-sm font-extralight">Şifrenizi girin</p>
             <div>
               <input
                 type="password"
                 {...register("password")}
-                placeholder="Password"
+                placeholder="Şireniz"
                 className="input input-primary w-full input-md"
               />
               <p className="mt-1 text-error font-semibold  text-sm">
@@ -88,17 +88,17 @@ const FormSignIn = () => {
             type="submit"
             className={`mt-6 btn btn-primary w-full ${isLoading && "loading"}`}
           >
-            Sign In
+            Kayıt Ol
           </button>
         </form>
-        <div className="my-5 flex justify-center">OR</div>
+        <div className="my-5 flex justify-center">YA DA</div>
         <div className="flex flex-nowrap space-x-2 items-center justify-center">
           <button
             onClick={() => loginSocial("google")}
             className="btn btn-sm gap-2  btn-secondary capitalize"
           >
             <FcGoogle size="20px" />
-            Sign in with Google
+            Google İle Giriş Yap
           </button>
 
           <button
