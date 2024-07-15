@@ -103,7 +103,7 @@ const Home: NextPageWithLayout = () => {
   return (
     <>
       <Head>
-        <title>ChatXo</title>
+        <title>Wexam Sohbet</title>
       </Head>
       <CurrentChat
         currentChat={current}
