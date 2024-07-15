@@ -14,13 +14,13 @@ const CardWronging: FC<ComponentProps> = ({ ok, cancel, loading, text }) => {
           <div className="text-2xl text-center mb-10">{text}</div>
           <div className="flex justify-center md:space-x-12  space-x-2">
             <button className="btn btn-outline" onClick={cancel}>
-              Cancel
+              Ayrıl
             </button>
             <button
               onClick={ok}
               className={`btn btn-error ${loading && "loading"}`}
             >
-              Delete
+              Sil
             </button>
           </div>
         </div>
