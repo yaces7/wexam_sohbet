@@ -57,11 +57,11 @@ const FormSignUp = () => {
           </p>
         </div>
         <div>
-          <h1 className="text-4xl font-bold">Sign Up</h1>
+          <h1 className="text-4xl font-bold">Kayıt Olma</h1>
         </div>
         <form onSubmit={handleSubmit(onSubmitHandler)}>
           <div className="mt-5 space-y-2">
-            <p className="text-sm font-extralight">Enter Email address</p>
+            <p className="text-sm font-extralight">Email Adresiniz girin</p>
             <div>
               <input
                 type="email"
@@ -75,12 +75,12 @@ const FormSignUp = () => {
             </div>
             <div className="flex space-x-2">
               <div className="space-y-2">
-                <p className="text-sm font-extralight ">İlk adınız</p>
+                <p className="text-sm font-extralight ">İsminiz</p>
                 <div>
                   <input
                     type="text"
                     {...register("firstName")}
-                    placeholder="First Name"
+                    placeholder="İsminiz"
                     className="input input-primary w-full  input-md"
                   />
                   <p className="mt-1 text-error font-semibold  text-sm">
@@ -89,12 +89,12 @@ const FormSignUp = () => {
                 </div>
               </div>
               <div className="space-y-2">
-                <p className="text-sm font-extralight">Soy adınız</p>
+                <p className="text-sm font-extralight">Yaşınız</p>
                 <div>
                   <input
                     type="text"
                     {...register("lastName")}
-                    placeholder="Soyadınızı sallayabilirsiniz"
+                    placeholder="Yaşınızı girin"
                     className="input input-primary w-full  input-md"
                   />
                   <p className="mt-1 text-error font-semibold  text-sm">
