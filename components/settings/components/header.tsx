@@ -8,7 +8,7 @@ const Header = ({ closeDialog }: HeaderProps) => {
         <div className="flex items-center">
           <div className="text-center sm:text-left">
             <h2 className="text-lg font-medium leading-6 text-base-content">
-              Settings
+              Ayarlar
             </h2>
           </div>
         </div>
