@@ -43,7 +43,7 @@ const FormSignIn = () => {
     <>
       <div className="bg-base-200 w-auto sm:w-96  rounded-3xl p-8 z-20">
         <div className="flex justify-between items-center">
-          <p className="font-thin ">Wexam Sohbet Yerine Hoşgeldin</p>
+          <p className="font-thin ">Wexam Sohbet</p>
           <p className=" font-serif text-xs">
             Hessabın Yok mu ?<br />
             <span
@@ -55,7 +55,7 @@ const FormSignIn = () => {
           </p>
         </div>
         <div>
-          <h1 className="text-4xl font-bold ">Kayıt OL</h1>
+          <h1 className="text-4xl font-bold ">Giriş Yapma</h1>
         </div>
         <form onSubmit={handleSubmit(onSubmitHandler)}>
           <div className="mt-5 space-y-3">
