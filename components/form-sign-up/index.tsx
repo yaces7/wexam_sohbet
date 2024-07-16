@@ -7,17 +7,17 @@ import { useEffect } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { AiOutlineGithub } from "react-icons/ai";
 const signUpSchema = object({
-  firstName: string().min(1, "Required"),
-  lastName: string().min(1, "Required"),
-  email: string().min(1, "Required").email("Email Address is invalid"),
+  firstName: string().min(1, "Gerekli!"),
+  lastName: string().min(1, "Gerekli!"),
+  email: string().min(1, "Gerekli!").email("Email Adresi Bulunamadı"),
   password: string()
-    .min(1, "Required")
-    .min(6, "Password must be more than 8 characters")
-    .max(32, "Password must be less than 32 characters"),
-  confirmPassword: string().min(1, { message: "Confirm Password is required" }),
+    .min(1, "Gerekli!")
+    .min(6, "Şifreniz 6 karakterden fazla olmalı!")
+    .max(32, "Şifreniz 32 karakterden az olmalı!"),
+  confirmPassword: string().min(1, { message: "Şifreyi onaylama gerekli!" }),
 }).refine((data) => data.password === data.confirmPassword, {
   path: ["confirmPassword"],
-  message: "Password don't match",
+  message: "Şifreler eşleşmiyor!",
 });
 export type signUpInput = TypeOf<typeof signUpSchema>;
 const FormSignUp = () => {
@@ -45,14 +45,14 @@ const FormSignUp = () => {
     <>
       <div className="bg-base-200  w-auto sm:w-96 rounded-3xl p-8 z-20">
         <div className="flex justify-between items-center">
-          <p className="font-thin ">Welcome to chat App</p>
+          <p className="font-thin ">Wexam Sohbet yerine Hoşgeldin!</p>
           <p className=" font-serif text-xs">
-            Have an Account ?<br />
+            Hesabın var mı ?<br />
             <span
               className="text-success cursor-pointer text-bold"
               onClick={() => router.push("/sign-in")}
             >
-              Sign In
+              Kayıt Olma
             </span>
           </p>
         </div>
@@ -75,7 +75,7 @@ const FormSignUp = () => {
             </div>
             <div className="flex space-x-2">
               <div className="space-y-2">
-                <p className="text-sm font-extralight ">First Name</p>
+                <p className="text-sm font-extralight ">İlk adınız</p>
                 <div>
                   <input
                     type="text"
@@ -89,12 +89,12 @@ const FormSignUp = () => {
                 </div>
               </div>
               <div className="space-y-2">
-                <p className="text-sm font-extralight">Last Name</p>
+                <p className="text-sm font-extralight">Soy adınız</p>
                 <div>
                   <input
                     type="text"
                     {...register("lastName")}
-                    placeholder="Last Name"
+                    placeholder="Soyadınızı sallayabilirsiniz"
                     className="input input-primary w-full  input-md"
                   />
                   <p className="mt-1 text-error font-semibold  text-sm">
@@ -103,11 +103,11 @@ const FormSignUp = () => {
                 </div>
               </div>
             </div>
-            <p className="text-sm font-extralight">Enter your Password</p>
+            <p className="text-sm font-extralight">Şifrenizi girin</p>
             <div>
               <input
                 type="password"
-                placeholder="Password"
+                placeholder="Şifreniz"
                 {...register("password")}
                 className="input input-primary w-full input-md"
               />
@@ -116,12 +116,12 @@ const FormSignUp = () => {
               </p>
             </div>
             <p className="text-sm font-extralight">
-              Enter your Confirm Password
+              Şifrenizi onaylayın
             </p>
             <div>
               <input
                 type="password"
-                placeholder="Confirm Password"
+                placeholder="Şifreyi Onayla"
                 {...register("confirmPassword")}
                 className="input input-primary w-full input-md"
               />
@@ -134,17 +134,17 @@ const FormSignUp = () => {
             type="submit"
             className={`mt-5 btn btn-primary w-full ${isLoading && "loading"}`}
           >
-            Sign Up
+            Kayıt Ol
           </button>
         </form>
-        <div className="my-5 flex justify-center">OR</div>
+        <div className="my-5 flex justify-center">YA DA</div>
         <div className="flex flex-nowrap space-x-2 items-center justify-center">
           <button
             onClick={() => loginSocial("google")}
             className="btn btn-sm gap-2  btn-secondary capitalize"
           >
             <FcGoogle size="20px" />
-            Sign up with Google
+            Google ile Kayıt Ol
           </button>
 
           <button
