@@ -45,12 +45,12 @@ const FormSignIn = () => {
         <div className="flex justify-between items-center">
           <p className="font-thin ">Wexam Sohbet Yerine Hoşgeldin</p>
           <p className=" font-serif text-xs">
-            Hesap Yok ?<br />
+            Hessabın Yok mu ?<br />
             <span
               className="text-success cursor-pointer text-bold"
               onClick={() => router.push("/sign-up")}
             >
-              Kayıt Ol
+              Giriş Yap
             </span>
           </p>
         </div>
@@ -88,7 +88,7 @@ const FormSignIn = () => {
             type="submit"
             className={`mt-6 btn btn-primary w-full ${isLoading && "loading"}`}
           >
-            Kayıt Ol
+            Giriş Yap
           </button>
         </form>
         <div className="my-5 flex justify-center">YA DA</div>
