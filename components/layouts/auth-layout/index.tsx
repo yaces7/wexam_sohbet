@@ -11,11 +11,11 @@ const AuthLayout = ({ children }: componentProps) => {
           <div className="flex btn btn-ghost">
             <div className="font-title text-secondary inline-flex text-3xl transition-all duration-200 md:text-4xl">
               <span className="lowercase"></span>
-              <span className="text-base-content uppercase">XO</span>
+              <span className="text-base-content uppercase">SB</span>
             </div>
           </div>
           <ThemeChange />
-        </div>Wexam Sohbet
+        </div>Wexam
         <div className="flex justify-center items-center mb-8">{children}</div>
         {/* <svg
           className="fill-secondary z-10 w-full h-auto relative"
