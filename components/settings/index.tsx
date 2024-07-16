@@ -23,7 +23,7 @@ const Settings = ({ closeDialog }: SettingsProps) => {
             } `}
           >
             <AiOutlineSetting className="h-5 w-5 mr-1" />
-            General
+            Genel
           </div>
           <div
             onClick={() => setActiveTab(1)}
@@ -31,7 +31,7 @@ const Settings = ({ closeDialog }: SettingsProps) => {
               activeTab === 1 && "tab-active"
             }`}
           >
-            <MdManageAccounts className="h-5 w-5 mr-1" /> Account
+            <MdManageAccounts className="h-5 w-5 mr-1" /> Hesap
           </div>
         </div>
         <div className="flex-1 min-h-[460px] relative overflow-hidden px-4">
