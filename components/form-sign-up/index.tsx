@@ -45,7 +45,7 @@ const FormSignUp = () => {
     <>
       <div className="bg-base-200  w-auto sm:w-96 rounded-3xl p-8 z-20">
         <div className="flex justify-between items-center">
-          <p className="font-thin ">Wexam Sohbet yerine Hoşgeldin!</p>
+          <p className="font-thin ">Wexam Sohbet</p>
           <p className=" font-serif text-xs">
             Hesabın var mı ?<br />
             <span
